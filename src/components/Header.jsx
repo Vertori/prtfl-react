@@ -10,7 +10,7 @@ const Header = () => {
         <Link to="/">
           <span className="text-3xl">Logo</span>
         </Link>
-        <nav className="hidden lg:flex font-semibold gap-x-2">
+        <nav className="hidden xl:flex font-semibold gap-x-2">
           <Link
             to="/"
             className="px-6 py-2.5 transition text-xl rounded-[30px] hover:bg-[#89cff0] hover:text-white"
@@ -24,10 +24,10 @@ const Header = () => {
             About Me
           </Link>
           <Link
-            to="/portfolio"
+            to="/projects"
             className="px-6 py-2.5 transition text-xl rounded-[30px] hover:bg-[#89cff0] hover:text-white"
           >
-            Portfolio
+            Projects
           </Link>
           <Link
             to="/contact"
@@ -36,11 +36,11 @@ const Header = () => {
             Contact
           </Link>
         </nav>
-        {/* socials */}
-        <Socials />
-        {/* mobile nav */}
-        <MobileNav />
       </div>
+      {/* socials */}
+      <Socials />
+      {/* mobile nav */}
+      <MobileNav />
     </header>
   );
 };
