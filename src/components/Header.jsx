@@ -5,7 +5,7 @@ import { Link } from "react-router-dom";
 
 const Header = () => {
   return (
-    <header className="fixed w-full px-[30px] lg:px-[100px] z-30 h-[100px] lg:h-[140px] flex items-center ">
+    <header className="fixed w-full px-[30px] lg:px-[100px] z-30 h-[100px] lg:h-[140px] flex items-center">
       <div className="flex flex-col lg:flex-row lg:items-center w-full justify-between">
         <Link to="/">
           <span className="text-3xl">Logo</span>
@@ -37,8 +37,6 @@ const Header = () => {
           </Link>
         </nav>
       </div>
-      {/* socials */}
-      <Socials />
       {/* mobile nav */}
       <MobileNav />
     </header>
