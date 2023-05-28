@@ -1,13 +1,6 @@
 import React from "react";
 import avatar2 from "../assets/avatar2.webp";
-import {
-  htmlLogo,
-  cssLogo,
-  jsLogo,
-  reactLogo,
-  tailwindLogo,
-  firebaseLogo,
-} from "../assets";
+import techList from "../assets";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Navigation } from "swiper";
 import "swiper/css";
@@ -27,13 +20,33 @@ const About = () => {
           <h1 className="h1 mb-4 text-center lg:text-start">About Me</h1>
           <p className="text-[20px] text-primary text-center lg:text-start">
             I'm Rafał, a passionate and self-taught Frontend Developer who
-            spends every single day learning new things and developing his
-            programming skills. Besides, I am an IT technician and a student of IT in
-            business and I definitely enjoy discovering new technologies.
+            spends every single day learning new things along with solutions,
+            best practices and developing his programming skills. Besides, I am
+            an IT technician and a student of IT in business and I definitely
+            enjoy discovering new technologies.
           </p>
         </div>
 
         {/* slider container */}
+        <div>
+          <h1 className="font-primary font-bold text-2xl mb-2">
+            Technologies I've been using
+          </h1>
+          <div className="h-full bg-white border shadow-xl py-4 grid grid-cols-2 sm:grid-cols-3 md:grid-cols-6">
+            {techList.map((item) => {
+              return (
+                <div className="flex flex-col justify-center items-center h-full px-6">
+                  <img
+                    className="w-16 sm:w-20 h-full"
+                    src={item.image}
+                    alt={item.name}
+                  />
+                  <span className="text-sm sm:text-base">{item.name}</span>
+                </div>
+              );
+            })}
+          </div>
+        </div>
       </div>
     </section>
   );
