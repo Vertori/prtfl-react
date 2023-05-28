@@ -8,7 +8,14 @@ const Header = () => {
     <header className="fixed w-full px-[30px] lg:px-[100px] z-30 h-[100px] lg:h-[140px] flex items-center">
       <div className="flex flex-col lg:flex-row lg:items-center w-full justify-between">
         <Link to="/">
-          <span className="text-3xl">Logo</span>
+          <span className="text-3xl text-gray-500">
+            {String.fromCharCode(60)}
+          </span>
+          <span className="text-3xl"> Rafał Fikus </span>
+          <span className="text-3xl text-gray-500">
+            {String.fromCharCode(47)}
+            {String.fromCharCode(62)}
+          </span>
         </Link>
         <nav className="hidden xl:flex font-semibold gap-x-2">
           <Link
