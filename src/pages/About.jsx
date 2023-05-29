@@ -1,10 +1,10 @@
 import React from "react";
 import avatar2 from "../assets/avatar2.webp";
 import techList from "../assets";
-import { Swiper, SwiperSlide } from "swiper/react";
-import { Navigation } from "swiper";
 import "swiper/css";
 import "swiper/css/navigation";
+import Qualification from "../components/Qualification";
+import TechItem from "../components/TechItem";
 
 const About = () => {
   return (
@@ -19,20 +19,21 @@ const About = () => {
           />
           <h1 className="h1 mb-4 text-center lg:text-start">About Me</h1>
           <p className="text-[20px] text-primary text-center lg:text-start">
-            I'm Rafał, a passionate and self-taught Frontend Developer who
-            spends every single day learning new things along with solutions,
-            best practices and developing his programming skills. Besides, I am
-            an IT technician and a student of IT in business and I definitely
-            enjoy discovering new technologies.
+            I'm Rafał, a 24 years old passionate and self-taught Frontend
+            Developer who spends every single day learning new things along with
+            solutions, best practices and developing his programming skills. I'm
+            always focusing on creating responsive and user-friendly websites.
+            Besides, I am an IT technician and a student of IT in business and I
+            definitely enjoy discovering new technologies.
           </p>
         </div>
 
         {/* slider container */}
-        <div>
+        <div className="container mx-auto h-max">
           <h1 className="font-primary font-bold text-2xl mb-2">
             Technologies I've been using
           </h1>
-          <div className="h-full bg-white border shadow-xl py-4 grid grid-cols-2 sm:grid-cols-3 md:grid-cols-6">
+          <div className="bg-white border shadow-xl py-4 grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-6   ">
             {techList.map((item) => {
               return (
                 <div className="flex flex-col justify-center items-center h-full px-6">
@@ -47,6 +48,11 @@ const About = () => {
             })}
           </div>
         </div>
+
+        {/* Qualification section */}
+        <Qualification />
+
+        {/* Languages */}
       </div>
     </section>
   );
