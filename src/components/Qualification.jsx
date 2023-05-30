@@ -25,7 +25,7 @@ const Qualification = () => {
           }`}
         >
           <IoIosSchool />
-          <span>Education</span>
+          <p>Education</p>
         </button>
         <button
           onClick={() => setSelectedCategory("Work")}
@@ -34,7 +34,7 @@ const Qualification = () => {
           }`}
         >
           <MdWork />
-          <span>Work</span>
+          <p>Work</p>
         </button>
       </div>
       {/* displayed journey */}

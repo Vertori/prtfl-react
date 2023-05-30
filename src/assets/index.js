@@ -8,6 +8,7 @@ import styledcomponentsLogo from "./techLogos/styledcomponentsLogo.svg";
 import framermotionLogo from "./techLogos/framermotionLogo.svg";
 import githubLogo from "./techLogos/githubLogo.svg";
 import gitLogo from "./techLogos/gitLogo.svg";
+import typescriptLogo from "./techLogos/typescriptLogo.svg";
 
 const techList = [
   {
@@ -62,4 +63,12 @@ const techList = [
   },
 ];
 
-export default techList;
+const currentlyLearning = [
+  {
+    id: 1,
+    name: "Typescript",
+    image: typescriptLogo,
+  },
+];
+
+export { techList, currentlyLearning };
