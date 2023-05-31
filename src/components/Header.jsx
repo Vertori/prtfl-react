@@ -1,5 +1,4 @@
 import React from "react";
-import Socials from "./Socials";
 import MobileNav from "./MobileNav";
 import { Link } from "react-router-dom";
 
