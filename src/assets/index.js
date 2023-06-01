@@ -9,6 +9,17 @@ import framermotionLogo from "./techLogos/framermotionLogo.svg";
 import githubLogo from "./techLogos/githubLogo.svg";
 import gitLogo from "./techLogos/gitLogo.svg";
 import typescriptLogo from "./techLogos/typescriptLogo.svg";
+import netflix1 from "./websites/netflix1.webp";
+import netflix2 from "./websites/netflix2.webp";
+import netflix3 from "./websites/netflix3.webp";
+import ecommerce1 from "./websites/ecommerce1.webp";
+import ecommerce2 from "./websites/ecommerce2.webp";
+import ecommerce3 from "./websites/ecommerce3.webp";
+import yt1 from "./websites/yt1.webp";
+import yt2 from "./websites/yt2.webp";
+import yt3 from "./websites/yt3.webp";
+import tesla1 from "./websites/tesla1.webp";
+import tesla2 from "./websites/tesla2.webp";
 
 const techList = [
   {
@@ -71,4 +82,57 @@ const currentlyLearning = [
   },
 ];
 
-export { techList, currentlyLearning };
+const projectsList = [
+  {
+    id: 1,
+    name: "Netflix Clone",
+    description:
+      "Netlix Clone created by fetching data from TMDb API, fully styled using Tailwind CSS. Thanks to Firebase, the website allows signing in, signing up, saving movies for signed in users and deleting them from saved list. Account page is only available to signed in users, which is provided by protected route. ",
+    images: [netflix1, netflix2, netflix3],
+    tags: [
+      "React",
+      "Tailwind CSS",
+      "API (Axios)",
+      "Firebase",
+      "React Router",
+      "Swiper",
+    ],
+  },
+  {
+    id: 2,
+    name: "E-commerce website",
+    description:
+      "Online store website created by fetching data from Fake Store API, fully styled using Tailwind CSS. The website allows you to add items to the cart and fully manipulate cart content. The shopping cart dynamically updates the number of items in it and their total value. Each product has its own dynamically generated page.",
+    images: [ecommerce1, ecommerce2, ecommerce3],
+    tags: ["React", "Tailwind CSS", "API (Axios)", "React Router", "Swiper"],
+  },
+  {
+    id: 3,
+    name: "YouTube Clone",
+    description:
+      "Website created by fetching data from API, fully styled using Tailwind CSS. It allows you to search for movies and channels, to watch movies and explore channels content. Each movie includes its own dynamically generated page that contains information about the movie and displays other related movies.",
+    images: [yt1, yt2, yt3],
+    tags: [
+      "React",
+      "Tailwind CSS",
+      "API (Axios)",
+      "React Router",
+      "React Player",
+    ],
+  },
+  {
+    id: 4,
+    name: "Tesla Clone",
+    description:
+      "Tesla Clone website created using Styled Components. This is a simple page that, using a single component that accepts props, generates sections for each brand model. Sections are animated using React Awesome Reveal, and scrolling the mouse causes the website to jump to the next sections.",
+    images: [tesla1, tesla2],
+    tags: [
+      "React",
+      "Styled Components",
+      "React Router",
+      "React Awesome Reveal",
+    ],
+  },
+];
+
+export { techList, currentlyLearning, projectsList };
