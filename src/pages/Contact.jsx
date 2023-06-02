@@ -1,9 +1,44 @@
-import React from "react";
+import React, { useRef, useState } from "react";
+import emailjs from "@emailjs/browser";
 import { MdLocationOn } from "react-icons/md";
 import { FiMail } from "react-icons/fi";
 import { BsTelephoneFill } from "react-icons/bs";
 
 const Contact = () => {
+  const [formValues, setFormValues] = useState({
+    name: "",
+    email: "",
+    message: "",
+  });
+
+  const form = useRef();
+
+  const sendEmail = (e) => {
+    e.preventDefault();
+
+    emailjs
+      .sendForm(
+        "service_9q2dmux",
+        "template_5wgirza",
+        form.current,
+        "uVRheN4NPUWe8Yv7q"
+      )
+      .then(
+        (result) => {
+          console.log(result.text);
+        },
+        (error) => {
+          console.log(error.text);
+        }
+      );
+
+    setFormValues({
+      name: "",
+      email: "",
+      message: "",
+    });
+  };
+
   return (
     <section className="section bg-[#FCFCFC]">
       <div className="container mx-auto min-h-full pt-52 px-4 pb-28">
@@ -21,7 +56,7 @@ const Contact = () => {
             <FiMail className="text-2xl" />
             <div>
               <h3 className="text-xl">E-mail</h3>
-              <p className="text-base text-gray-600">rafue9@gmail.com</p>
+              <p className="text-base text-gray-600">rafalfik9@gmail.com</p>
             </div>
           </div>
           {/* Phone Number */}
@@ -43,7 +78,11 @@ const Contact = () => {
         </div>
         {/* Form */}
         <div className="w-full bg-white border shadow-xl p-12  xl:p-4 relative">
-          <form className="flex flex-col gap-8 mt-8">
+          <form
+            className="flex flex-col gap-8 mt-8"
+            ref={form}
+            onSubmit={sendEmail}
+          >
             <div className="flex flex-col gap-y-2">
               <label htmlFor="name" className="font-primary text-lg font-bold">
                 Your Name
@@ -51,8 +90,14 @@ const Contact = () => {
               <input
                 type="text"
                 id="name"
+                name="name"
                 placeholder="Name"
+                value={formValues.name}
+                onChange={(e) =>
+                  setFormValues({ ...formValues, name: e.target.value })
+                }
                 className="bg-gray-100 py-4 px-6  text-primary rounded-lg outline-none border-none font-medium"
+                required
               />
             </div>
             <div className="flex flex-col gap-y-2">
@@ -61,9 +106,13 @@ const Contact = () => {
               </label>
               <input
                 type="email"
-                name=""
+                name="email"
                 id="email"
                 placeholder="E-mail"
+                value={formValues.email}
+                onChange={(e) =>
+                  setFormValues({ ...formValues, email: e.target.value })
+                }
                 className="bg-gray-100 py-4 px-6  text-primary rounded-lg outline-none border-none font-medium"
               />
             </div>
@@ -76,13 +125,20 @@ const Contact = () => {
               </label>
               <textarea
                 id="message"
+                name="message"
                 cols="30"
                 rows="10"
                 placeholder="Message"
+                value={formValues.message}
+                onChange={(e) =>
+                  setFormValues({ ...formValues, message: e.target.value })
+                }
                 className="bg-gray-100 py-4 px-6  text-primary rounded-lg outline-none border-none font-medium"
               ></textarea>
             </div>
-            <button className="btn">Send</button>
+            <button className="btn" type="submit">
+              Send
+            </button>
           </form>
         </div>
       </div>
