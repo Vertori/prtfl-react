@@ -12,11 +12,11 @@ import { transition1 } from "../transitions";
 const About = () => {
   return (
     <motion.section
-      initial={{ opacity: 0, y: "-100%" }}
+      initial={{ opacity: 0, y: "-50%" }}
       animate={{ opacity: 1, y: 0 }}
-      exit={{ opacity: 0, y: "-100%" }}
+      exit={{ opacity: 0, y: "-50%" }}
       transition={transition1}
-      className="section bg-[#FCFCFC]"
+      className="section"
     >
       <div className="container mx-auto min-h-full pt-52 px-4 flex flex-col gap-y-12 pb-8">
         {/* About me */}

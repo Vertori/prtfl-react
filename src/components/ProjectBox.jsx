@@ -24,7 +24,7 @@ const ProjectBox = ({ item }) => {
             {images.map((image) => {
               return (
                 <SwiperSlide>
-                  <img className="h-full w-full" src={image} alt="" />
+                  <img className="h-full w-full" src={image} alt=""/>
                 </SwiperSlide>
               );
             })}

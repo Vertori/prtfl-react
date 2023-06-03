@@ -5,6 +5,8 @@ import { FiMail } from "react-icons/fi";
 import { BsTelephoneFill } from "react-icons/bs";
 import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
+import { motion } from "framer-motion";
+import { transition1 } from "../transitions";
 
 const Contact = () => {
   const [formValues, setFormValues] = useState({
@@ -55,18 +57,36 @@ const Contact = () => {
   };
 
   return (
-    <section className="section bg-[#FCFCFC]">
+    <motion.section
+      initial={{ opacity: 0, y: "-50%" }}
+      animate={{ opacity: 1, y: 0 }}
+      exit={{ opacity: 0, y: "-50%" }}
+      transition={transition1}
+      className="section"
+    >
       <ToastContainer />
       <div className="container mx-auto min-h-full pt-52 px-4 pb-28">
         {/* Page title */}
-        <div className="text-center">
+        <motion.div
+          initial={{ scale: 0 }}
+          animate={{ scale: 1 }}
+          exit={{ scale: 0 }}
+          transition={transition1}
+          className="text-center"
+        >
           <h1 className="h1">Contact</h1>
           <h2 className="text-[26px] lg:text-[36px] font-primary mb-4 lg:mb-12">
             Get in touch with me
           </h2>
-        </div>
+        </motion.div>
         {/* Contact info container*/}
-        <div className="flex flex-col sm:flex-row justify-center gap-x-12 gap-y-4 sm:gap-y-0 mb-8">
+        <motion.div
+          initial={{ scale: 0 }}
+          animate={{ scale: 1 }}
+          exit={{ scale: 0 }}
+          transition={transition1}
+          className="flex flex-col sm:flex-row justify-center gap-x-12 gap-y-4 sm:gap-y-0 mb-8"
+        >
           {/* E-mail */}
           <div className="flex items-center gap-x-4 justify-center">
             <FiMail className="text-2xl" />
@@ -91,9 +111,15 @@ const Contact = () => {
               <p className="text-base text-gray-600">Opole, Wrocław / Poland</p>
             </div>
           </div>
-        </div>
+        </motion.div>
         {/* Form */}
-        <div className="w-full bg-white border shadow-xl p-12  xl:p-4 relative">
+        <motion.div
+          initial={{ scale: 0 }}
+          animate={{ scale: 1 }}
+          exit={{ scale: 0 }}
+          transition={transition1}
+          className="w-full bg-white border shadow-xl p-12  xl:p-4 relative"
+        >
           <form
             className="flex flex-col gap-8 mt-8"
             ref={form}
@@ -156,9 +182,9 @@ const Contact = () => {
               Send
             </button>
           </form>
-        </div>
+        </motion.div>
       </div>
-    </section>
+    </motion.section>
   );
 };
 

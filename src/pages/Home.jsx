@@ -12,7 +12,7 @@ const Home = () => {
       animate={{ opacity: 1, y: 0 }}
       exit={{ opacity: 0, y: "-50%" }}
       transition={transition1}
-      className="section flex items-center justify-center px-4 bg-[#FCFCFC]"
+      className="section flex items-center justify-center px-4"
     >
       <div className="container h-full flex flex-col lg:flex-row items-center gap-x-32 pt-36 xl:pt-0">
         <Socials />
