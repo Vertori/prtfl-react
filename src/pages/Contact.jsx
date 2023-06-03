@@ -3,6 +3,8 @@ import emailjs from "@emailjs/browser";
 import { MdLocationOn } from "react-icons/md";
 import { FiMail } from "react-icons/fi";
 import { BsTelephoneFill } from "react-icons/bs";
+import { ToastContainer, toast } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
 
 const Contact = () => {
   const [formValues, setFormValues] = useState({
@@ -15,20 +17,33 @@ const Contact = () => {
 
   const sendEmail = (e) => {
     e.preventDefault();
+    const emailNoti = toast.loading("Please wait...");
 
     emailjs
       .sendForm(
-        "service_9q2dmux",
-        "template_5wgirza",
+        import.meta.env.VITE_YOUR_SERVICE_ID,
+        import.meta.env.VITE_YOUR_TEMPLATE_ID,
         form.current,
-        "uVRheN4NPUWe8Yv7q"
+        import.meta.env.VITE_YOUR_PUBLIC_KEY
       )
       .then(
         (result) => {
           console.log(result.text);
+          toast.update(emailNoti, {
+            render: "E-mail sent, thanks! 🥰",
+            type: "success",
+            isLoading: false,
+            autoClose: 4000,
+          });
         },
         (error) => {
           console.log(error.text);
+          toast.update(emailNoti, {
+            render: "Something went wrong! 😥",
+            type: "error",
+            isLoading: false,
+            autoClose: 4000,
+          });
         }
       );
 
@@ -41,6 +56,7 @@ const Contact = () => {
 
   return (
     <section className="section bg-[#FCFCFC]">
+      <ToastContainer />
       <div className="container mx-auto min-h-full pt-52 px-4 pb-28">
         {/* Page title */}
         <div className="text-center">
