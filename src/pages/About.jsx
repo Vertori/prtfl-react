@@ -6,13 +6,27 @@ import "swiper/css/navigation";
 import Qualification from "../components/Qualification";
 import TechItem from "../components/TechItem";
 import Languages from "../components/Languages";
+import { motion } from "framer-motion";
+import { transition1 } from "../transitions";
 
 const About = () => {
   return (
-    <section className="section bg-[#FCFCFC]">
+    <motion.section
+      initial={{ opacity: 0, y: "-100%" }}
+      animate={{ opacity: 1, y: 0 }}
+      exit={{ opacity: 0, y: "-100%" }}
+      transition={transition1}
+      className="section bg-[#FCFCFC]"
+    >
       <div className="container mx-auto min-h-full pt-52 px-4 flex flex-col gap-y-12 pb-8">
         {/* About me */}
-        <div className="w-full bg-white border shadow-xl p-12  xl:p-4 relative">
+        <motion.div
+          initial={{ scale: 0 }}
+          animate={{ scale: 1 }}
+          exit={{ scale: 0 }}
+          transition={transition1}
+          className="w-full bg-white border shadow-xl p-12  xl:p-4 relative"
+        >
           <img
             className="absolute right-[50%] -top-24 translate-x-1/2 lg:translate-x-0 lg:right-0 lg:-top-20 max-w-[140px] lg:max-w-[160px] lg:rotate-12"
             src={avatar2}
@@ -27,10 +41,16 @@ const About = () => {
             websites. Besides, I am an IT technician and a student of IT in
             business and I definitely enjoy discovering new technologies.
           </p>
-        </div>
+        </motion.div>
 
         {/* slider container */}
-        <div className="container mx-auto h-max">
+        <motion.div
+          initial={{ scale: 0 }}
+          animate={{ scale: 1 }}
+          exit={{ scale: 0 }}
+          transition={transition1}
+          className="container mx-auto h-max"
+        >
           <h1 className="font-primary font-bold text-2xl mb-2">
             Technologies I've been using
           </h1>
@@ -39,19 +59,25 @@ const About = () => {
               return <TechItem item={item} key={item.id} />;
             })}
           </div>
-        </div>
+        </motion.div>
 
         {/* Qualification section */}
-        <div className="flex flex-col lg:flex-row gap-y-12 mb-12 gap-x-12">
+        <motion.div
+          initial={{ scale: 0 }}
+          animate={{ scale: 1 }}
+          exit={{ scale: 0 }}
+          transition={transition1}
+          className="flex flex-col lg:flex-row gap-y-12 mb-12 gap-x-12"
+        >
           <Qualification />
 
           {/* Languages container */}
           <Languages />
-        </div>
+        </motion.div>
 
         {/* Languages */}
       </div>
-    </section>
+    </motion.section>
   );
 };
 
