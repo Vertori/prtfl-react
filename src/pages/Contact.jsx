@@ -63,7 +63,7 @@ const Contact = () => {
       transition={transition1}
       className="section"
     >
-      <div className="container mx-auto min-h-full pt-52 px-4 pb-28">
+      <div className="container mx-auto min-h-full pt-40 px-4 pb-28">
         {/* Page title */}
         <motion.div
           initial={{ scale: 0 }}

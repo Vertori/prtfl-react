@@ -1,10 +1,24 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import MobileNav from "./MobileNav";
-import { Link } from "react-router-dom";
+import { Link, useLocation } from "react-router-dom";
 
 const Header = () => {
+  const [isActive, setIsActive] = useState(false);
+  const location = useLocation();
+  const currentRoute = location.pathname;
+
+  useEffect(() => {
+    window.addEventListener("scroll", () => {
+      window.scrollY > 40 ? setIsActive(true) : setIsActive(false);
+    });
+  });
+
   return (
-    <header className="fixed w-full px-[30px] lg:px-[100px] z-30 h-[100px] lg:h-[140px] flex items-center">
+    <header
+      className={`${
+        isActive ? "bg-white shadow-md" : "bg-none"
+      } fixed w-full px-[30px] lg:px-[100px] z-30 h-[100px] flex items-center transition-all duration-500`}
+    >
       <div className="flex flex-col lg:flex-row lg:items-center w-full justify-between">
         <Link to="/">
           <span className="text-3xl text-gray-500">
@@ -19,25 +33,33 @@ const Header = () => {
         <nav className="hidden xl:flex font-semibold gap-x-2">
           <Link
             to="/"
-            className="px-6 py-2.5 transition text-xl rounded-[30px] hover:bg-[#89cff0] hover:text-white"
+            className={`${
+              currentRoute === "/" ? "bg-black text-white" : "bg-none"
+            } px-6 py-2.5 transition duration-300 text-xl rounded-[30px] hover:bg-black hover:text-white `}
           >
             Home
           </Link>
           <Link
             to="/about"
-            className="px-6 py-2.5 transition text-xl rounded-[30px] hover:bg-[#89cff0] hover:text-white"
+            className={`${
+              currentRoute === "/about" ? "bg-black text-white" : "bg-none"
+            } px-6 py-2.5 transition duration-300  text-xl rounded-[30px] hover:bg-black hover:text-white`}
           >
             About Me
           </Link>
           <Link
             to="/projects"
-            className="px-6 py-2.5 transition text-xl rounded-[30px] hover:bg-[#89cff0] hover:text-white"
+            className={`${
+              currentRoute === "/projects" ? "bg-black text-white" : "bg-none"
+            } px-6 py-2.5 transition duration-300  text-xl rounded-[30px] hover:bg-black hover:text-white`}
           >
             Projects
           </Link>
           <Link
             to="/contact"
-            className="px-6 py-2.5 transition text-xl rounded-[30px] hover:bg-[#89cff0] hover:text-white"
+            className={`${
+              currentRoute === "/contact" ? "bg-black text-white" : "bg-none"
+            } px-6 py-2.5 transition duration-300  text-xl rounded-[30px] hover:bg-black hover:text-white`}
           >
             Contact
           </Link>

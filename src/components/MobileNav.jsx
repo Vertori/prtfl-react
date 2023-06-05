@@ -1,5 +1,5 @@
-import React, { useState } from "react";
-import { Link } from "react-router-dom";
+import React, { useEffect, useState } from "react";
+import { Link, useLocation } from "react-router-dom";
 import { motion } from "framer-motion";
 import { IoMdClose } from "react-icons/io";
 import { CgMenuRight } from "react-icons/cg";
@@ -18,6 +18,12 @@ const menuVariants = {
 
 const MobileNav = () => {
   const [openMenu, setOpenMenu] = useState(false);
+  const { pathname } = useLocation();
+
+  // close mobile nav on route change
+  useEffect(() => {
+    setOpenMenu(false);
+  }, [pathname]);
 
   return (
     <nav className="text-primary xl:hidden">
@@ -33,7 +39,9 @@ const MobileNav = () => {
         variants={menuVariants}
         initial="hidden"
         animate={openMenu ? "show" : ""}
-        className="bg-white shadow-2xl w-full h-screen absolute top-0 right-0 max-w-xs z-20"
+        className={`${
+          openMenu ? "shadow-2xl" : "shadow-none"
+        } bg-white w-full h-screen absolute top-0 right-0 max-w-xs z-20`}
       >
         {/* close icon */}
         <div

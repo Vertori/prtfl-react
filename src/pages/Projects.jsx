@@ -13,7 +13,7 @@ const Projects = () => {
       transition={transition1}
       className="section"
     >
-      <div className="container mx-auto min-h-full pt-52 px-4 pb-28">
+      <div className="container mx-auto min-h-full pt-40 px-4 pb-28">
         <div className="pb-6">
           <h1 className="h1 text-center">Some of my projects</h1>
         </div>

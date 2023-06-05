@@ -21,9 +21,9 @@ const ProjectBox = ({ item }) => {
             slidesPerGroup={1}
             navigation={true}
           >
-            {images.map((image) => {
+            {images.map((image, index) => {
               return (
-                <SwiperSlide>
+                <SwiperSlide key={index}>
                   <img
                     className="h-full w-full select-none"
                     src={image}
@@ -41,9 +41,12 @@ const ProjectBox = ({ item }) => {
           <p>{description}</p>
           {/* tags */}
           <div className="flex flex-wrap gap-4">
-            {tags.map((tag) => {
+            {tags.map((tag, index) => {
               return (
-                <p className="bg-blue-200 px-[10px] py-[2px] rounded-[50px]">
+                <p
+                  className="bg-blue-200 px-[10px] py-[2px] rounded-[50px]"
+                  key={index}
+                >
                   {tag}
                 </p>
               );
