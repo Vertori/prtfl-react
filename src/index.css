@@ -13,14 +13,14 @@
     @apply min-h-screen w-screen;
   }
   .btn {
-    @apply py-[18px] px-[50px] h-[66px] flex items-center justify-center text-base uppercase font-secondary font-semibold bg-primary text-white;
+    @apply py-[18px] px-[50px] h-[66px] flex items-center justify-center text-base uppercase font-secondary font-semibold bg-primary text-white border border-black hover:bg-white hover:text-primary transition duration-300;
   }
 }
 
 .swiper-button-next,
 .swiper-button-prev {
   color: white !important;
-  background-color: black!important;
+  background-color: black !important;
   border-radius: 50% !important;
   opacity: 1 !important;
   height: 2.5rem !important;
@@ -32,4 +32,8 @@
 .swiper-button-prev::after {
   font-size: 1rem !important;
   font-weight: 700 !important;
+}
+
+.Toastify__toast-container {
+  top: 8rem;
 }

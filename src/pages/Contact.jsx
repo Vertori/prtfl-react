@@ -3,8 +3,7 @@ import emailjs from "@emailjs/browser";
 import { MdLocationOn } from "react-icons/md";
 import { FiMail } from "react-icons/fi";
 import { BsTelephoneFill } from "react-icons/bs";
-import { ToastContainer, toast } from "react-toastify";
-import "react-toastify/dist/ReactToastify.css";
+import { toast } from "react-toastify";
 import { motion } from "framer-motion";
 import { transition1 } from "../transitions";
 
@@ -64,7 +63,6 @@ const Contact = () => {
       transition={transition1}
       className="section"
     >
-      <ToastContainer />
       <div className="container mx-auto min-h-full pt-52 px-4 pb-28">
         {/* Page title */}
         <motion.div

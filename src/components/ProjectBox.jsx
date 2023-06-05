@@ -24,7 +24,12 @@ const ProjectBox = ({ item }) => {
             {images.map((image) => {
               return (
                 <SwiperSlide>
-                  <img className="h-full w-full" src={image} alt=""/>
+                  <img
+                    className="h-full w-full select-none"
+                    src={image}
+                    alt={name}
+                    loading="lazy"
+                  />
                 </SwiperSlide>
               );
             })}
@@ -45,7 +50,7 @@ const ProjectBox = ({ item }) => {
             })}
           </div>
           {/* redirecting buttons */}
-          <div className="flex flex-col xl:flex-row gap-4 mt-9">
+          <div className="flex flex-col xl:flex-row gap-4 mt-[34px]">
             <button className="btn flex gap-x-2">
               <p>Live</p>
               <FiExternalLink className="text-xl" />

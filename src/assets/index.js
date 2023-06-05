@@ -16,7 +16,6 @@ import ecommerce1 from "./websites/ecommerce1.webp";
 import ecommerce2 from "./websites/ecommerce2.webp";
 import ecommerce3 from "./websites/ecommerce3.webp";
 import yt1 from "./websites/yt1.webp";
-import yt2 from "./websites/yt2.webp";
 import yt3 from "./websites/yt3.webp";
 import tesla1 from "./websites/tesla1.webp";
 import tesla2 from "./websites/tesla2.webp";
@@ -111,7 +110,7 @@ const projectsList = [
     name: "YouTube Clone",
     description:
       "Website created by fetching data from API, fully styled using Tailwind CSS. It allows you to search for movies and channels, to watch movies and explore channels content. Each movie includes its own dynamically generated page that contains information about the movie and displays other related movies.",
-    images: [yt1, yt2, yt3],
+    images: [yt1, yt3],
     tags: [
       "React",
       "Tailwind CSS",

@@ -10,7 +10,7 @@ const Header = () => {
           <span className="text-3xl text-gray-500">
             {String.fromCharCode(60)}
           </span>
-          <span className="text-3xl"> Rafał Fikus </span>
+          <span className="text-3xl">Rafał Fikus </span>
           <span className="text-3xl text-gray-500">
             {String.fromCharCode(47)}
             {String.fromCharCode(62)}
