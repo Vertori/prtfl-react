@@ -7,11 +7,13 @@ import SideSocials from "./components/SideSocials";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import { motion } from "framer-motion";
 import { ToastContainer } from "react-toastify";
+import ScrollToTop from "./components/ScrollToTop";
 
 function App() {
   return (
     <>
       <Router>
+        <ScrollToTop />
         <ToastContainer />
         <Header />
         <SideSocials />

@@ -9,6 +9,7 @@ import framermotionLogo from "./techLogos/framermotionLogo.svg";
 import githubLogo from "./techLogos/githubLogo.svg";
 import gitLogo from "./techLogos/gitLogo.svg";
 import typescriptLogo from "./techLogos/typescriptLogo.svg";
+import reduxLogo from "./techLogos/reduxLogo.svg";
 import netflix1 from "./websites/netflix1.webp";
 import netflix2 from "./websites/netflix2.webp";
 import netflix3 from "./websites/netflix3.webp";
@@ -78,6 +79,11 @@ const currentlyLearning = [
     id: 1,
     name: "Typescript",
     image: typescriptLogo,
+  },
+  {
+    id: 2,
+    name: "Redux",
+    image: reduxLogo,
   },
 ];
 
