@@ -7,7 +7,8 @@ const SideSocials = () => {
       <ul>
         <li className="flex justify-between items-center w-40 h-14 px-4 bg-black ml-[-100px] duration-500 hover:rounded-md hover:ml-[-10px] rounded-tr-md">
           <a
-            href=""
+            href="https://www.linkedin.com/in/rafa%C5%82-fikus-687815245/"
+            target="_blank"
             className="flex justify-between items-center w-full text-white font-semibold ml-4"
           >
             LinkedIn
@@ -25,7 +26,8 @@ const SideSocials = () => {
         </li>
         <li className="flex justify-between items-center w-40 h-14 px-4 bg-black ml-[-100px] duration-500 hover:rounded-md hover:ml-[-10px] rounded-br-md">
           <a
-            href=""
+            href="https://github.com/Vertori"
+            target="_blank"
             className="flex justify-between items-center w-full text-white font-semibold ml-4"
           >
             Github

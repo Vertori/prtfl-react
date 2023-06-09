@@ -98,7 +98,7 @@ const Contact = () => {
             <BsTelephoneFill className="text-2xl" />
             <div>
               <h3 className="text-xl">Phone</h3>
-              <p className="text-base text-gray-600">+48 123-456-789</p>
+              <p className="text-base text-gray-600">+48 783-166-973</p>
             </div>
           </div>
           {/* Location */}
