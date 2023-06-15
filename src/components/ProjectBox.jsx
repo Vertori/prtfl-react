@@ -7,7 +7,7 @@ import "swiper/css";
 import "swiper/css/navigation";
 
 const ProjectBox = ({ item }) => {
-  const { name, description, images, tags } = item;
+  const { name, description, images, tags, liveLink, codeLink } = item;
   return (
     <>
       {/* Project 1 */}
@@ -54,14 +54,18 @@ const ProjectBox = ({ item }) => {
           </div>
           {/* redirecting buttons */}
           <div className="flex flex-col xl:flex-row gap-4 mt-[34px]">
-            <button className="btn flex gap-x-2">
-              <p>Live</p>
-              <FiExternalLink className="text-xl" />
-            </button>
-            <button className="btn flex gap-x-2">
-              Code
-              <BsGithub className="text-xl" />
-            </button>
+            <a href={liveLink} target="_blank">
+              <button className="btn flex gap-x-2">
+                <p>Live</p>
+                <FiExternalLink className="text-xl" />
+              </button>
+            </a>
+            <a href={codeLink} target="_blank">
+              <button className="btn flex gap-x-2">
+                Code
+                <BsGithub className="text-xl" />
+              </button>
+            </a>
           </div>
         </div>
       </div>

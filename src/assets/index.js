@@ -102,6 +102,8 @@ const projectsList = [
       "React Router",
       "Swiper",
     ],
+    liveLink: "https://netflix-clone-react-rf.netlify.app/",
+    codeLink: "https://github.com/Vertori/ntflx-cln-react",
   },
   {
     id: 2,
@@ -110,6 +112,8 @@ const projectsList = [
       "Online store website created by fetching data from Fake Store API, fully styled using Tailwind CSS. The website allows you to add items to the cart and fully manipulate cart content. The shopping cart dynamically updates the number of items in it and their total value. Each product has its own dynamically generated page.",
     images: [ecommerce1, ecommerce2, ecommerce3],
     tags: ["React", "Tailwind CSS", "API (Axios)", "React Router", "Swiper"],
+    liveLink: "https://ecmrc-react-rf.netlify.app/",
+    codeLink: "https://github.com/Vertori/e-cmrc-react",
   },
   {
     id: 3,
@@ -124,6 +128,8 @@ const projectsList = [
       "React Router",
       "React Player",
     ],
+    liveLink: "https://yt-clone-react-rf.netlify.app/",
+    codeLink: "https://github.com/Vertori/yt-cln-react",
   },
   {
     id: 4,
@@ -137,6 +143,8 @@ const projectsList = [
       "React Router",
       "React Awesome Reveal",
     ],
+    liveLink: "https://tesla-clone-react-rf.netlify.app/",
+    codeLink: "https://github.com/Vertori/tsl-cln-react",
   },
 ];
 

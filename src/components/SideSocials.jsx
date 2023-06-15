@@ -17,7 +17,8 @@ const SideSocials = () => {
         </li>
         <li className="flex justify-between items-center w-40 h-14 px-4 bg-black ml-[-100px] duration-500 hover:rounded-md hover:ml-[-10px]">
           <a
-            href=""
+            href="https://drive.google.com/file/d/1UxIpCbqG5Yh3ItfAR5up_pgdsakBR_tI/view?usp=sharing"
+            target="_blank"
             className="flex justify-between items-center w-full text-white font-semibold ml-4"
           >
             Resume
